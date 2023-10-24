@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import{Routes, RouterModule} from '@angular/router';
 
-
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatIconModule} from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -29,17 +30,20 @@ import { CsetComponent } from './cset/cset.component';
 import { MalcomComponent } from './malcom/malcom.component';
 import { ConpcaComponent } from './conpca/conpca.component';
 import { CyberchampComponent } from './cyberchamp/cyberchamp.component';
+import { LeftsidenavComponent } from './leftsidenav/leftsidenav.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
 const appRoutes : Routes =[
-{ path: "" , component: MainPageComponent},
+// { path: "" , component: MainPageComponent},
 { path:"toolsuite", component: ToolsuiteComponent},
 { path:"scores", component: ScoresComponent},
 { path:"cset", component: CsetComponent},
 { path:"malcom", component: MalcomComponent},
 { path:"cyberchamp", component: CyberchampComponent},
 { path:"conpca", component: ConpcaComponent},
+{ path:"dashboard", component: DashboardComponent},
 ]
 
 @NgModule({
@@ -53,7 +57,9 @@ const appRoutes : Routes =[
     CsetComponent,
     MalcomComponent,
     ConpcaComponent,
-    CyberchampComponent
+    CyberchampComponent,
+    LeftsidenavComponent,
+    DashboardComponent
    ],
   imports: [
     BrowserModule,
@@ -70,7 +76,9 @@ const appRoutes : Routes =[
     MatProgressBarModule,
     MatTabsModule,
     MatCardModule,
-    ChartsModule
+    ChartsModule,
+    MatIconModule,
+    MatSidenavModule
   ],
   providers: [
    
